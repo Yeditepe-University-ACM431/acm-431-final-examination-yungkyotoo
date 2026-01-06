@@ -9,16 +9,24 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.yeditepe.finalexam.model.Task
 import com.yeditepe.finalexam.viewmodel.TaskViewModel
+import sun.tools.jstat.Alignment
+import java.lang.reflect.Modifier
 
 @Composable
 fun TaskListScreen(viewModel: TaskViewModel = viewModel()) {
 
     // TODO 3: Read task list from ViewModel
-
+val selectedTask = viewModel.getTaskById(Id)
+    selectedTask?.let { task ->
+    }
     Column {
         // TODO 4: Display task titles and completion status
         // Use a simple Column or LazyColumn
+        Column()
+        modifier = Modifier.fillmaxSize().padding(16.dp),,
+        horizontalAligement = Alignment.CenterHorizontally)
     }
+
 }
 
 @Composable
