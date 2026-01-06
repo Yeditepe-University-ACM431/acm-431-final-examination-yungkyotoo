@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import org.w3c.dom.Text
 
 @Composable
 fun TaskItemScreen() {
@@ -25,6 +26,11 @@ fun TaskItemScreen() {
 
         // TODO 2: Show text "Completed" or "Not Completed"
         // depending on completion state
+        if (iscompleted.isEmpty()) {
+            Text ("Not Completed")
+        } else {
+            Text("Completed")
+        }
 
         Button(
             onClick = {
@@ -40,4 +46,5 @@ fun TaskItemScreen() {
 @Composable
 fun TaskItemPreview() {
     // TODO: Call TaskItemScreen
+    TaskItemScreen()
 }
